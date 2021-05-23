@@ -1,5 +1,5 @@
 import os
-import sys
+import init.initsh
 
 bin = "src/utils"
 
@@ -20,9 +20,10 @@ def execCommand(parsed:list):
             os.system(f"python3 {bin}/{command}.py")
         elif command=="exit":
             exit()
-        elif file!=f"{command}.py":
+        elif f"{command}.py" not in os.listdir(bin):
             print("Command not found")
             break
+    
 
 def getDir():
     dir = os.getcwd()
@@ -30,6 +31,7 @@ def getDir():
 
 
 def main():
+    init.initsh.clearshell()
     while True:
         print(getDir()+"$")
         command = getCommand()
