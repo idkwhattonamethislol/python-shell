@@ -9,3 +9,9 @@ Command not found is printed on every execution, even if the command is run succ
 
 # Built-in Commands
 `exit` : Exit the shell
+
+# Dependencies
+> Repository structure should be left as is
+> No non-built-in libraries need to be installed
+> Python 3 is required
+
