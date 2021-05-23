@@ -5,7 +5,7 @@ A simple shell (non scriptable) made in python
 Any python file present in the src/utils folder can be run by running the command (filename) without the .py extension
 
 # Bugs
-Command not found is printed on every execution, even if the command is run successfully
+Command not found is printed on every execution, even if the command is run successfully(fixed)
 
 # Built-in Commands
 `exit` : Exit the shell
