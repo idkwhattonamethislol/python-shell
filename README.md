@@ -6,6 +6,7 @@ Any python file present in the src/utils folder can be run by running the comman
 
 # Bugs
 Command not found is printed on every execution, even if the command is run successfully(fixed)
+Scream command prints a list value
 
 # Built-in Commands
 `exit` : Exit the shell
