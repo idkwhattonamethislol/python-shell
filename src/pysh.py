@@ -33,7 +33,7 @@ def getDir():
 def main():
     init.initsh.clearshell()
     while True:
-        print(getDir()+"$")
+        print(getDir()+"$", end = ' ')
         command = getCommand()
         parsed_command = parse(command)
         execCommand(parsed_command)
