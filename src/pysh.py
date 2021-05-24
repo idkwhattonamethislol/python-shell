@@ -1,3 +1,6 @@
+
+"""USE THIS SHELL AT YOUR OWN RISK. USE WITH SUDO/ADMIN PRIVILEGES IS NOT ADVISED"""
+
 import os
 import init.initsh
 
