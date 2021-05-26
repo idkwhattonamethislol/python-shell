@@ -2,9 +2,13 @@
 """USE THIS SHELL AT YOUR OWN RISK. USE WITH SUDO/ADMIN PRIVILEGES IS NOT ADVISED"""
 
 import os
-import init.initsh
+from init.initsh import check, clearshell
 
 bin = "src/utils"
+
+def pwd():
+    dir = os.getcwd()
+    print("Current working directory: "+dir)
 
 def parse(command):
     parsed = command.split(" ")
@@ -23,20 +27,26 @@ def execCommand(parsed:list):
             os.system(f"python3 {bin}/{command}.py")
         elif command=="exit":
             exit()
+        elif command=="pwd":
+            pwd()
+            break
+        elif command == None:
+            pass
         elif f"{command}.py" not in os.listdir(bin):
             print("Command not found")
             break
+        
     
 
 def getDir():
     dir = os.getcwd()
     return dir
 
-
 def main():
-    init.initsh.clearshell()
+    clearshell()
+    loggedinuser = check()
     while True:
-        print(getDir()+"$", end = ' ')
+        print(getDir()+"&user={}:$".format(loggedinuser),end=' ')
         command = getCommand()
         parsed_command = parse(command)
         execCommand(parsed_command)
