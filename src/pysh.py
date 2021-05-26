@@ -25,8 +25,6 @@ def execCommand(parsed:list):
             os.system(f"python3 {bin}/{command}.py {''.join(f'{parsed[1:]}')}")
         elif file==f"{command}.py" and len(parsed)==1:
             os.system(f"python3 {bin}/{command}.py")
-        elif command=="exit":
-            exit()
         elif command=="pwd":
             pwd()
             break
