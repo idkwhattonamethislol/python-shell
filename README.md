@@ -10,7 +10,7 @@ Command not found is printed on every execution, even if the command is run succ
 Scream command prints a list value
 
 # Built-in Commands
-`exit` : Exit the shell
+`pwd` : Print the current working directory
 
 # Dependencies
 > Repository structure should be left as is
