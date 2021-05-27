@@ -28,6 +28,8 @@ def execCommand(parsed:list):
         elif command=="pwd":
             pwd()
             break
+        elif command == "exit":
+            exit(0)
         elif command == None:
             pass
         elif f"{command}.py" not in os.listdir(bin):
